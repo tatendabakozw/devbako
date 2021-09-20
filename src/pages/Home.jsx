@@ -3,10 +3,13 @@ import GeneralLayout from '../layouts/GeneralLayout'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Facebook, Twitter, GitHub } from '@material-ui/icons'
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 
 function Home() {
     return (
-        <GeneralLayout>
+        <div>
+            <Navbar/>
             <div className="dark:bg-gray-900 div flex flex-col">
                 <div className="home md:h-screen h-auto flex flex-col">
                     <div className="bg-blue-50 dark:bg-blue-900 w-11/12 h-5/6 bg-opacity-100 rounded-br-full flex-col flex">
@@ -40,7 +43,8 @@ function Home() {
                 <div className="absolute z-0 opacity-25 self-end bg-indigo-600 md:h-60 h-28 md:w-60 w-28 rounded-bl-full md:-bottom-60 -bottom-28 right-0"></div>
                 <div className="h-screen"></div>
             </div>
-        </GeneralLayout>
+            <Footer/>
+        </div>
     )
 }
 
