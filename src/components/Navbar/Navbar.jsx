@@ -5,9 +5,25 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { LightBulbIcon, MoonIcon } from '@heroicons/react/solid'
 import useDarkMode from "../../useDarkMode";
 
+const nav_options = [
+    {
+        name: 'Articles',
+        location: "/articles"
+    },
+    {
+        name: 'About',
+        location: '/about'
+    },
+    {
+        name: 'Projects',
+        location: '/projects'
+    }
+]
+
 export default function Navbar(props) {
     const [colorTheme, setTheme] = useDarkMode();
     const [navbarOpen, setNavbarOpen] = useState(false);
+    
     return (
         <>
             <nav
@@ -15,7 +31,7 @@ export default function Navbar(props) {
                     (props.transparent
                         ? "top-0 absolute z-50 w-full"
                         : "absolute w-full top-0") +
-                    " flex flex-wrap items-center justify-between p-2 md:px-8 pl-4 pr-0 navbar-expand-lg"
+                    " flex flex-wrap items-center justify-between md:px-8 px-0 navbar-expand-lg"
                 }
             >
                 <div className="container px-8 py-2 mx-auto flex flex-wrap items-center">
@@ -37,13 +53,13 @@ export default function Navbar(props) {
                                     " py-4 lg:py-2 flex md:hidden items-center text-xs uppercase font-bold"
                                 }
                             >
-                            <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
-                            {colorTheme === 'light' ? (
-                                <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
-                            ) : (
-                                <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
-                            )}
-                        </span>
+                                <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
+                                    {colorTheme === 'light' ? (
+                                        <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
+                                    ) : (
+                                        <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
+                                    )}
+                                </span>
                             </div>
                             <button
                                 className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -62,42 +78,23 @@ export default function Navbar(props) {
                         className={"lg:flex md:flex-grow md:ml-1 ml-auto items-center bg-white lg:dark:bg-transparent dark:bg-gray-800 lg:bg-transparent lg:shadow-none" +
                             (navbarOpen ? " block rounded shadow-lg" : " hidden")} id="example-navbar-warning">
                         <ul className="flex flex-col items-center md:px-0 px-8 lg:flex-row list-none mr-auto">
-                            <li className="flex items-center">
-                                <Link to='/'
-                                    className={
-                                        (props.transparent
-                                            ? "lg:text-gray-900 lg:hover:text-gray-700 text-gray-800"
-                                            : "text-gray-700 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-600") +
-                                        " px-5 py-4 lg:py-2 flex w-full items-center text-xs uppercase font-bold"
-                                    }>
+                            {
+                                nav_options.map((option, index) => (
+                                    <li key={index} className="flex items-center">
+                                        <Link to={option.location}
+                                            className={
+                                                (props.transparent
+                                                    ? "lg:text-gray-900 lg:hover:text-gray-700 text-gray-800"
+                                                    : "text-gray-700 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-600") +
+                                                " px-5 py-4 lg:py-2 flex w-full items-center text-xs uppercase font-bold"
+                                            }>
 
-                                    Articles
-                                </Link>
-                            </li>
-                            <li className="flex items-center">
-                                <Link to='/'
-                                    className={
-                                        (props.transparent
-                                            ? "lg:text-gray-900 lg:hover:text-gray-700 text-gray-800"
-                                            : "text-gray-700 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-600") +
-                                        " px-5 py-4 lg:py-2 flex w-full items-center text-xs uppercase font-bold"
-                                    }>
+                                            {option.name}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
 
-                                    About
-                                </Link>
-                            </li>
-                            <li className="flex items-center">
-                                <Link to='/'
-                                    className={
-                                        (props.transparent
-                                            ? "lg:text-gray-900 lg:hover:text-gray-700 text-gray-800"
-                                            : "text-gray-700 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-600") +
-                                        " px-5 py-4 lg:py-2 flex w-full items-center text-xs uppercase font-bold"
-                                    }>
-
-                                    Projects
-                                </Link>
-                            </li>
                         </ul>
                         <ul className="flex flex-col items-center lg:flex-row list-none lg:ml-auto">
                             <li className="md:flex hidden items-center">
@@ -109,13 +106,13 @@ export default function Navbar(props) {
                                         " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                                     }
                                 >
-                                <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
-                                {colorTheme === 'light' ? (
-                                    <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
-                                ) : (
-                                    <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
-                                )}
-                            </span>
+                                    <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
+                                        {colorTheme === 'light' ? (
+                                            <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
+                                        ) : (
+                                            <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
+                                        )}
+                                    </span>
                                 </div>
                             </li>
 

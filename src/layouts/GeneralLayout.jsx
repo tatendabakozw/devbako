@@ -8,7 +8,7 @@ function GeneralLayout({children}) {
             <div>
                 <Navbar/>
             </div>
-            <div className="dark:bg-gray-900">
+            <div className="dark:bg-gray-900 dark:text-gray-200 min-h-screen pt-20">
                 {children}
             </div>
             <div>
