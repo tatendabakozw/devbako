@@ -5,8 +5,6 @@ function useDarkMode() {
     const [theme, setTheme] = useState(localStorage.getItem('devbakotheme'))
 
     const colorTheme = theme === 'dark' ? 'light' : 'dark';
-
-    console.log(colorTheme)
     
     useEffect(() => {
         if (theme === 'null') {

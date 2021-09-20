@@ -11,7 +11,7 @@ function Home() {
                 <div className="home md:h-screen h-auto flex flex-col">
                     <div className="bg-blue-50 dark:bg-blue-900 w-11/12 h-5/6 bg-opacity-100 rounded-br-full flex-col flex">
                         <div className=" w-full md:pb-8 pb-40 md:px-16 px-8 md:pt-48 pt-36">
-                            <p className="md:text-6xl md:w-1/2 w-full text-2xl text-gray-800 dark:text-gray-200 font-semibold mb-8">
+                            <p className="md:text-6xl md:w-3/2 w-full text-2xl text-gray-800 dark:text-gray-200 font-semibold mb-8">
                                 Challenge me. Let's create awesome builds together.</p>
                             <p className="mb-4 text-gray-600 dark:text-gray-300 md:w-1/2 w-3/4">Hi, iam Tatenda Bako. I am a fullstack software developer, creating both mobile and web applications </p>
                             <div className="flex">
