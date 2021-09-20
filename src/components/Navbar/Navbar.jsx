@@ -23,7 +23,7 @@ const nav_options = [
 export default function Navbar(props) {
     const [colorTheme, setTheme] = useDarkMode();
     const [navbarOpen, setNavbarOpen] = useState(false);
-    
+
     return (
         <>
             <nav
@@ -34,7 +34,7 @@ export default function Navbar(props) {
                     " flex flex-wrap items-center justify-between md:px-8 px-0 navbar-expand-lg"
                 }
             >
-                <div className="container px-8 py-2 mx-auto flex flex-wrap items-center">
+                <div className="container px-4 py-2 mx-auto flex flex-wrap items-center">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <Link to='/'
                             className={
@@ -55,20 +55,20 @@ export default function Navbar(props) {
                             >
                                 <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
                                     {colorTheme === 'light' ? (
-                                        <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
+                                        <LightBulbIcon width={20} height={20} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded" />
                                     ) : (
-                                        <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
+                                        <MoonIcon width={20} height={20} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded" />
                                     )}
                                 </span>
                             </div>
                             <button
-                                className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                                className="cursor-pointer text-xl leading-none pl-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                                 type="button"
                                 onClick={() => setNavbarOpen(!navbarOpen)}>
                                 <span
                                     className={(props.transparent ? "text-white" : "text-gray-800 dark:text-gray-300")}
                                 >
-                                    <MenuIcon />
+                                    <MenuIcon height={20} width={20} />
                                 </span>
                             </button>
                         </div>
