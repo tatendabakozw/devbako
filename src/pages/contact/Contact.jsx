@@ -6,6 +6,7 @@ import {
   PhoneIcon,
   LocationMarkerIcon,
 } from "@heroicons/react/outline";
+import Footer from "../../components/Footer/Footer";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -34,17 +35,17 @@ function Contact() {
           <div className="absolute top-0 w-full h-full bg-center bg-cover">
             <span
               id="blackOverlay"
-              className="w-full h-full absolute bg-gradient-to-r from-indigo-200 to-blue-400"
+              className="w-full h-full absolute bg-gradient-to-r from-indigo-200 dark:from-indigo-500 to-blue-400 dark:to-indigo-700"
             ></span>
           </div>
           <div className="container relative mx-auto pt-8">
             <div className="items-center flex md:flex-row flex-col my-auto justify-between">
               <div className="w-full text-center">
                 <div className="md:pr-12 pr-0">
-                  <h1 className="text-gray-800 font-semibold text-5xl">
+                  <h1 className="text-gray-800 dark:text-gray-200 font-semibold text-5xl">
                     Tell us about your project.
                   </h1>
-                  <p className="mt-4 text-lg text-gray-900">
+                  <p className="mt-4 text-lg text-gray-900 dark:text-gray-300">
                     Tell us about your project or venture, we will be glad to
                     help. Fill out the form below send send us an email.
                   </p>
@@ -53,7 +54,7 @@ function Contact() {
               <div className="img">
                 <img
                   src={contact}
-                  className="md:w-80 w-40 md:mt-auto mt-8"
+                  className="md:w-96 w-40 md:mt-auto mt-8"
                   alt="contact"
                 />
               </div>
@@ -71,12 +72,12 @@ function Contact() {
                       className="col-span-3 bg-white dark:bg-gray-800 px-4 py-5 rounded-l-lg"
                     >
                       <span className="flex flex-row items-center mb-8">
-                        <h4 className="font-bold text-gray-800  dark:text-gray-300 text-xl">
+                        <p className="font-bold text-gray-800  dark:text-gray-300 text-xl">
                           Send a message
-                        </h4>
+                        </p>
                         <MailIcon
-                          width={30}
-                          height={30}
+                          width={24}
+                          height={24}
                           className="text-indigo-800 dark:text-blue-700"
                         />
                       </span>
@@ -122,20 +123,20 @@ function Contact() {
                       </p>
                       <div className="below flex flex-col text-gray-300 items-start flex-1 justify-around">
                         <div className="flex flex-row items-center">
-                          <MailIcon width={24} height={24} className="mr-2" />
+                          <MailIcon width={20} height={20} className="mr-2" />
                           <p>tatendabakozw@gmail.com</p>
                         </div>
                         <div className="flex flex-row items-center">
-                          <PhoneIcon width={24} height={24} className="mr-2" />
+                          <PhoneIcon width={20} height={20} className="mr-2" />
                           <p>+263771445411</p>
                         </div>
                         <div className="flex flex-row items-center">
                           <LocationMarkerIcon
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
                             className="mr-2"
                           />
-                          <p>Available for both remote and relocation</p>
+                          <p>Remote and relocation</p>
                         </div>
                       </div>
                     </div>
@@ -146,6 +147,7 @@ function Contact() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
