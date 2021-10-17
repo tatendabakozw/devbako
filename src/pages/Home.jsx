@@ -10,7 +10,7 @@ function Home() {
     return (
         <div>
             <Navbar/>
-            <div className="dark:bg-gray-900 div flex flex-col">
+            <div className="dark:bg-gray-900 div flex flex-col lg:px-32 md:px-16 px-4 max-w-7-xl ">
                 <div className="home md:h-screen h-auto flex flex-col">
                     <div className="bg-blue-50 dark:bg-blue-900 w-11/12 h-5/6 bg-opacity-100 rounded-br-full flex-col flex">
                         <div className=" w-full md:pb-8 pb-40 md:px-16 px-8 md:pt-48 pt-36">
@@ -41,7 +41,12 @@ function Home() {
                 </div>
                 <div className="absolute z-0 opacity-25 bg-indigo-600 md:h-60 h-28 md:w-60 w-28 rounded-tl-full bottom-0 right-0"></div>
                 <div className="absolute z-0 opacity-25 self-end bg-indigo-600 md:h-60 h-28 md:w-60 w-28 rounded-bl-full md:-bottom-60 -bottom-28 right-0"></div>
-                <div className="h-screen"></div>
+                <div className="h-screen">
+                    <p className="md:text-3xl text-xl text-indigo-600 font-bold text-center mb-8">Recent Projects </p>
+                    <div className="grid grid-cols-3 gap8">
+                        
+                    </div>
+                </div>
             </div>
             <Footer/>
         </div>

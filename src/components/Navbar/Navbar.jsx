@@ -6,18 +6,18 @@ import { LightBulbIcon, MoonIcon } from '@heroicons/react/solid'
 import useDarkMode from "../../useDarkMode";
 
 const nav_options = [
-    {
-        name: 'Articles',
-        location: "/articles"
-    },
+    // {
+    //     name: 'Articles',
+    //     location: "/articles"
+    // },
     {
         name: 'About',
         location: '/about'
     },
-    {
-        name: 'Projects',
-        location: '/projects'
-    }
+    // {
+    //     name: 'Projects',
+    //     location: '/projects'
+    // }
 ]
 
 export default function Navbar(props) {
