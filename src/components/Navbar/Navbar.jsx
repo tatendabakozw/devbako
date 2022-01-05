@@ -34,7 +34,7 @@ export default function Navbar(props) {
                     " flex flex-wrap items-center justify-between md:px-8 px-0 navbar-expand-lg"
                 }
             >
-                <div className="container px-4 py-2 mx-auto flex flex-wrap items-center">
+                <div className="container lg:px-32 md:px-16 px-4 py-2 mx-auto flex flex-wrap items-center">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <Link to='/'
                             className={
@@ -77,7 +77,8 @@ export default function Navbar(props) {
                     <div
                         className={"lg:flex md:flex-grow md:ml-1 ml-auto items-center bg-white lg:dark:bg-transparent dark:bg-gray-800 lg:bg-transparent lg:shadow-none" +
                             (navbarOpen ? " block rounded shadow-lg" : " hidden")} id="example-navbar-warning">
-                        <ul className="flex flex-col items-center md:px-0 px-8 lg:flex-row list-none mr-auto">
+
+                        <ul className="flex flex-col items-center lg:flex-row list-none lg:ml-auto">
                             {
                                 nav_options.map((option, index) => (
                                     <li key={index} className="flex items-center">
@@ -95,26 +96,7 @@ export default function Navbar(props) {
                                 ))
                             }
 
-                        </ul>
-                        <ul className="flex flex-col items-center lg:flex-row list-none lg:ml-auto">
-                            <li className="md:flex hidden items-center">
-                                <div
-                                    className={
-                                        (props.transparent
-                                            ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                                            : "text-gray-800 hover:text-gray-600") +
-                                        " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                                    }
-                                >
-                                    <span onClick={() => setTheme(colorTheme)} style={{ transition: "all .15s ease" }}>
-                                        {colorTheme === 'light' ? (
-                                            <LightBulbIcon width={25} height={25} className="transition duration-150 ease-in-out hover:bg-gray-800 cursor-pointer text-gray-200 hover:text-gray-400 rounded p-1" />
-                                        ) : (
-                                            <MoonIcon width={25} height={25} className="hover:bg-gray-200 cursor-pointer text-gray-500 rounded p-1" />
-                                        )}
-                                    </span>
-                                </div>
-                            </li>
+
 
 
                             <li className="flex items-center">
