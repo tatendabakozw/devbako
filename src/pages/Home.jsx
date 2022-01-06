@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import real_estate from '../images/real-estate2.png'
 import eccomerce from '../images/ecommerce.png'
 import social_media from '../images/socail_media.png'
+import branding from '../images/branding.png'
 import ProjectComponent from '../components/project_compoenent/ProjectComponent';
 
 function Home() {
@@ -16,7 +17,7 @@ function Home() {
             <div className="dark:bg-gray-900 div flex flex-col max-w-7-xl min-h-screen">
                 <div className="home md:h-screen h-auto flex flex-col">
                     <div className="bg-blue-50 lg:px-32 md:px-16 px-4 dark:bg-blue-900 w-11/12 h-5/6 bg-opacity-100 rounded-br-full flex-col flex">
-                        <div className=" w-full md:pb-8 pb-40 md:px-12 px-4 md:pt-48 pt-36">
+                        <div className="container self-center w-full md:pb-8 pb-40 md:px-12 px-4 md:pt-48 pt-36">
                             <p className="md:text-6xl md:w-3/2 w-full text-2xl text-gray-800 dark:text-gray-200 font-semibold mb-8">
                                 Tatenda Bako.</p>
                             <p className="mb-4 text-gray-600 dark:text-gray-300 md:w-1/2 w-3/4">Challenge me. Let's create awesome builds together. I am a fullstack software developer, creating both mobile and web applications </p>
@@ -50,6 +51,9 @@ function Home() {
                 <p className="md:text-3xl text-xl text-gray-700 font-bold text-center my-16">Projects </p>
                 <div className="grid md:grid-cols-2 col-span-1 gap-6">
                     <ProjectComponent
+                        title={'Company Branding'}
+                        image={branding} />
+                    <ProjectComponent
                         image={real_estate}
                         title={'Real Estate Platform'}
                     />
@@ -60,7 +64,6 @@ function Home() {
                     <ProjectComponent
                         title={'ecommerce platform'}
                         image={eccomerce} />
-                    <ProjectComponent image={real_estate} />
                 </div>
             </div>
             <Footer />
