@@ -10,10 +10,10 @@ const nav_options = [
     //     name: 'Articles',
     //     location: "/articles"
     // },
-    {
-        name: 'About',
-        location: '/about'
-    },
+    // {
+    //     name: 'About',
+    //     location: '/about'
+    // },
     // {
     //     name: 'Projects',
     //     location: '/projects'

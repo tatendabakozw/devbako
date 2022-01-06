@@ -52,18 +52,24 @@ function Home() {
                 <div className="grid md:grid-cols-2 col-span-1 gap-6">
                     <ProjectComponent
                         title={'Company Branding'}
-                        image={branding} />
+                        image={branding}
+                        location='https://www.designworx.co.zw'
+                        />
                     <ProjectComponent
                         image={real_estate}
                         title={'Real Estate Platform'}
+                        location={'oneroofmarket.vercel.app'}
                     />
                     <ProjectComponent
                         image={social_media}
                         title={'social media platform'}
+                        location={'connectene.vercel.app'}
                     />
                     <ProjectComponent
                         title={'ecommerce platform'}
-                        image={eccomerce} />
+                        image={eccomerce}
+                        location={'trolliey.vercel.app'}
+                        />
                 </div>
             </div>
             <Footer />
